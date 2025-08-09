@@ -5,9 +5,9 @@ const path = require('path');
 async function helpCommand(sock, chatId, message) {
     const helpMessage = `
 ╔═══════════════════╗
-   *🤖 ${settings.botName || 'KnightBot-MD'}*  
-   Version: *${settings.version || '2.0.5'}*
-   by ${settings.botOwner || 'Mr Unique Hacker'}
+   *🤖 ${settings.botName || 'Mickey-Tech-Bot'}*  
+   Version: *${settings.version || '2.0.0'}*
+   by ${settings.botOwner || 'Mickey'}
    YT : ${global.ytch}
 ╚═══════════════════╝
 
@@ -147,14 +147,6 @@ async function helpCommand(sock, chatId, message) {
 ║ ➤ .ytmp4 <Link>
 ╚═══════════════════╝
 
-╔═══════════════════╗
-💻 *Github Commands:*
-║ ➤ .git
-║ ➤ .github
-║ ➤ .sc
-║ ➤ .script
-║ ➤ .repo
-╚═══════════════════╝
 
 Join our channel for updates:`;
 
@@ -171,8 +163,8 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
+                        newsletterJid: '120363422552152940@newsletter',
+                        newsletterName: 'Mickey-Tech-Bot',
                         serverMessageId: -1
                     }
                 }
@@ -185,8 +177,8 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD by Mr Unique Hacker',
+                        newsletterJid: '120363422552152940@newsletter',
+                        newsletterName: 'Mickey-Tech-Bot',
                         serverMessageId: -1
                     } 
                 }
