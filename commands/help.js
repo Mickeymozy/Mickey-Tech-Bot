@@ -5,10 +5,10 @@ const path = require('path');
 async function helpCommand(sock, chatId, message) {
     const helpMessage = `
 ╔═══════════════════╗
-   *🤖 ${settings.botName || 'Mickey-Tech-Bot'}*  
+   * ${settings.botName || 'Mickey-Tech-Bot'}*  
    Version: *${settings.version || '2.0.0'}*
    by ${settings.botOwner || 'Mickey'}
-   YT : ${global.ytch}
+   Master : ${global.ytch}
 ╚═══════════════════╝
 
 *Available Commands:*
