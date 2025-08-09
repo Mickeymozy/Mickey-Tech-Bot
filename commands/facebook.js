@@ -26,7 +26,7 @@ async function facebookCommand(sock, chatId, message) {
         });
 
         // Fetch video data from API
-        const response = await axios.get(`https://api.dreaded.site/api/facebook?url=${url}`);
+        const response = await axios.get(`https://api.diioffc.web.id/api/download/facebook?url=${url}`);
         const data = response.data;
 
         if (!data || data.status !== 200 || !data.facebook || !data.facebook.sdVideo) {
@@ -84,7 +84,7 @@ async function facebookCommand(sock, chatId, message) {
         await sock.sendMessage(chatId, {
             video: { url: tempFile },
             mimetype: "video/mp4",
-            caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 𝗞𝗡𝗜𝗚𝗛𝗧-𝗕𝗢𝗧"
+            caption: "DOWNLOAD BY MICKEY-TECH-BOT"
         }, { quoted: message });
 
         // Clean up temp file
