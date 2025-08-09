@@ -47,7 +47,7 @@ async function videoCommand(sock, chatId, message) {
             return;
         }
 
-        const apiUrl = `https://api.dreaded.site/api/ytdl/video?url=${encodeURIComponent(videoUrl)}`;
+        const apiUrl = `https://noobs-api.top/dipto/ytDl3?link=${encodeURIComponent(video.videoId)}&format=mp4`;
         
         const response = await axios.get(apiUrl, {
             headers: {
