@@ -14,21 +14,29 @@ async function playCommand(sock, chatId, message) {
         }
 
         // Search YouTube for the song
-        const { videos } = await yts(searchQuery);
+        const searchResults = await yts(searchQuery);
+        const videos = searchResults?.videos;
+
         if (!videos || videos.length === 0) {
             return await sock.sendMessage(chatId, {
                 text: "❌ No songs found. Try a different title."
             });
         }
 
+        // Use the first video result
+        const video = videos[0];
+        if (!video || !video.url) {
+            return await sock.sendMessage(chatId, {
+                text: "⚠️ Couldn't extract video URL. Please try again."
+            });
+        }
+
+        const urlYt = video.url;
+
         // Notify user that download is starting
         await sock.sendMessage(chatId, {
             text: "_⏳ Please wait, your download is in progress..._"
         });
-
-        // Use the first video result
-        const video = videos[0];
-        const urlYt = video.url;
 
         // Fetch audio data from external API
         const response = await axios.get(`https://apis.davidcyriltech.my.id/song?url=${encodeURIComponent(urlYt)}`);
@@ -51,7 +59,7 @@ async function playCommand(sock, chatId, message) {
         }, { quoted: message });
 
     } catch (error) {
-        console.error('❌ Error in playCommand:', error.message);
+        console.error('❌ Error in playCommand:', error);
         await sock.sendMessage(chatId, {
             text: "🚫 Download failed. Please try again later."
         });
@@ -64,4 +72,3 @@ module.exports = playCommand;
  * 🎧 Powered by Mickey
  * 💡 Credits to Mickey-Tech-Bot
  */
-
