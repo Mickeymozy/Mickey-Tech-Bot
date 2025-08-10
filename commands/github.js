@@ -1,5 +1,5 @@
 const settings = require("../settings");;
-const settings = require("../payment.js");
+const settings = require("../payment");
 const axios = require("axios");
 
 // Helper to format TZS with commas
