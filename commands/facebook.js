@@ -26,7 +26,7 @@ async function facebookCommand(sock, chatId, message) {
         });
 
         // Fetch video data from API
-        const response = await axios.get(`https://api.diioffc.web.id/api/download/facebook?url=${url}`);
+        const response = await axios.get(`https://apis-keith.vercel.app/download/fbdown?url=${url}`);
         const data = response.data;
 
         if (!data || data.status !== 200 || !data.facebook || !data.facebook.sdVideo) {
