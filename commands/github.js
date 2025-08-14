@@ -19,7 +19,7 @@ const settings = {
       bankName: "NMB Bank",
       swift: "CORUTZTZ"
     },
-    qrImageUrl: "https://files.catbox.moe/226ufq.png" // Invoice/QR image
+    qrImageUrl: "https://ibb.co/JwgKmjTD" // Invoice/QR image
   }
 };
 
